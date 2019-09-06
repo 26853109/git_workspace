@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.bw.dao.MyDao">
+		<select id="list" resultMap="map">
+			select work.*,w_dept.name from work left join w_dept on work.did=w_dept.id
+		</select>
+	</mapper>
